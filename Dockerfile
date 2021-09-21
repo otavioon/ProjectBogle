@@ -62,7 +62,7 @@ RUN mkdir -p /home/nonroot/.local/yacos \
 
 ## Copying and installing YaCos
 RUN mkdir -p /home/nonroot/YaCoS
-ADD . /home/nonroot/YaCoS/
+ADD ./YaCoS /home/nonroot/YaCoS/
 RUN sudo chown --recursive nonroot /home/nonroot/YaCoS \
     && chmod --recursive 777 /home/nonroot/YaCoS
 RUN cd /home/nonroot/YaCoS/ && rm -rf build/ && python -m pip install . 
